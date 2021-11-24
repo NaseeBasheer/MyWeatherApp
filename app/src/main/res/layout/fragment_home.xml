@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="382dp"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="39dp"
+        android:background="#9BA49E"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="33dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintLeft_toRightOf="@id/bookmark"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="37dp"
+        android:layout_height="39dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="262dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="83dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/ic_baseline_star_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_1"
+        app:layout_constraintRight_toRightOf="@id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@id/rectangle_1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/rectangle_5"
+        android:layout_width="match_parent"
+        android:layout_height="582dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="#B2BEB5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="0.0">
+
+    </View>
+
+    <EditText
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:hint="cityname"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@id/rectangle_1" />
+
+    <Button
+        android:id="@+id/go_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="Get weather"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_1"
+        app:layout_constraintRight_toRightOf="@id/rectangle_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangle_1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="12/01/2121"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_5"
+        app:layout_constraintTop_toTopOf="@id/rectangle_5" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="today"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_5"
+        app:layout_constraintTop_toBottomOf="@id/date" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="29°C"
+        android:textSize="35dp"
+        android:id="@+id/temp"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/temp"
+        app:layout_constraintLeft_toLeftOf="@id/rectangle_5"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Feels like 34°C"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/feels_like"/>
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/rectangle_5"
+        app:layout_constraintRight_toRightOf="@id/rectangle_5"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:text="Haze"
+        android:id="@+id/weather"/>
+
+    <ImageView
+        android:id="@+id/forecastIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_wb_sunny_24"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
