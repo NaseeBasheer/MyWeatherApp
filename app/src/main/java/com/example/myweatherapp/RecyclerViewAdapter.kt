@@ -1,7 +1,6 @@
 package com.example.calculatorapp.ui
 
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -9,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myweatherapp.R
 
 
-class RecyclerViewAdapter(val listData:List<DataModel>, val clickListener: ClickListener):RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class RecyclerViewAdapter(val listData: ArrayList<DataModel>, val clickListener: ClickListener):RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view){

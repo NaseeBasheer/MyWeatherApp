@@ -1,7 +1,9 @@
 package com.example.myweatherapp.service
 
 import com.example.myweatherapp.model.WeatherModel
+import com.example.myweatherapp.model1.ForecastWeatherModel
 import io.reactivex.Single
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -19,8 +21,11 @@ class WeatherApiService {
         .build()
         .create(WeatherApi::class.java)
 
-    fun getDataService(cityname: String): Single<WeatherModel> {
-        return api.getData(cityname)
+    fun getDataService(cityname: String, openWeatherMapApiKey: String): Call<WeatherModel> {
+        return api.getData(cityname, openWeatherMapApiKey)
     }
 
+    fun getSevenDayForecastService(lat: Float, lon: Float, exclude: String, units: String, apiKey: String): Call<ForecastWeatherModel> {
+        return api.sevenDayForecast(lat, lon, exclude, units, apiKey)
+    }
 }
